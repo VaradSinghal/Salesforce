@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>This topic is used to address and resolve guest complaints promptly and effectively. It focuses on identifying issues and providing solutions to enhance guest satisfaction.</description>
+    <developerName>p_16jdL000002Q7ZO_Customer_Complaint_Resolution</developerName>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__GetCaseByCaseNumber</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__GetAllCasesForContact</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__CreateCase</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__AddCaseComment</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the guest provides a case number, use SvcCopilotTmpl__GetCaseByCaseNumber to retrieve the case.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the guest does not provide a case number, use SvcCopilotTmpl__GetAllCasesForContact to search for related cases.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If no case exists, use SvcCopilotTmpl__CreateCase to log a new complaint.</description>
+        <developerName>instruction_2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once a case is identified, use SvcCopilotTmpl__AddCaseComment to document the guest&apos;s feedback.</description>
+        <developerName>instruction_3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_3</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jdL000002Q7ZO_Customer_Complaint_Resolution</localDeveloperName>
+    <masterLabel>Customer Complaint Resolution</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only assist in resolving customer complaints by identifying cases, adding comments to cases, or creating new cases when needed. You aren&apos;t able to handle non-complaint-related queries.</scope>
+</GenAiPlugin>
